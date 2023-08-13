@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:server": "node build-server.mjs",
+    "build:server": "node build.mjs",
     "build:postcss": "postcss --use tailwindcss -o public/index.css src/index.css",
     "start:server": "node dist/server.js",
     "dev:server": "yarn run build:server && yarn run build:postcss && yarn run start:server"
