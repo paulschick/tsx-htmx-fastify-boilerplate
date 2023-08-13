@@ -11,6 +11,6 @@
     "jsx": "react"
   },
   "exclude": [
-    "node_modules", "dist", "build"
+    "node_modules", "dist"
   ]
 }
