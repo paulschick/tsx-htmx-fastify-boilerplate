@@ -1,16 +1,20 @@
-# esbuild HTMX Tailwind
+# TypeScript, TSX, esbuild, htmx, Tailwind, PostCSS Boilerplate
 
-## Using Tailwind with esbuild
+This is a boilerplate project for using HTMX with the following technologies:
 
-Resource: [Using tailwind with esbuild](https://stackoverflow.com/questions/70716940/using-tailwind-css-with-esbuild-the-process)
+- TypeScript
+- TSX
+- esbuild
+- Tailwind
+- PostCSS
 
-This suggests using the tailwind CLI. This looks like a good option, provided that the production build server will
-have access to `npx`, which it should (it does on Vercel). I don't have to include Tailwind in the esbuild build script,
-I can run a script from the `package.json` file.
-Additionally, I'll just use css because I'm going to be primarily using tailwind classes. I will need to write some custom
-css, so I should just be able to include this in the index.css file.
+React is used on the server to compile the TSX files to HTML. This is done by using `react-dom/server` to render the
+TSX into HTML strings. Since the project is based on HTMX, the API returns HTML instead of JSON.
+Client-side JavaScript/TypeScript can be added, but is not included in this template.
 
-If I want access to modern CSS which I can transpile, I can use the `postcss` plugin for esbuild. This will allow me to
-use the latest CSS features, and then transpile them to a format that is supported by all browsers.
+Note - I had trouble integrating postcss with esbuild with the currently available plugins and versions.
+I opted to use the postcss cli instead.
 
-I am pretty certain that I can get the CLI to work without much trouble, so I might just try the postcss plugin.
+## Modification for your project
+
+- **esbuild target**: Currently set to `18.16`. Change this in `build.mjs` to your desired target.
