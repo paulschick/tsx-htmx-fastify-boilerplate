@@ -7,6 +7,7 @@ This is a boilerplate project for using HTMX with the following technologies:
 - esbuild
 - Tailwind
 - PostCSS
+- Jest
 
 React is used on the server to compile the TSX files to HTML. This is done by using `react-dom/server` to render the
 TSX into HTML strings. Since the project is based on HTMX, the API returns HTML instead of JSON.

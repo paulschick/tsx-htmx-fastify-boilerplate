@@ -1,0 +1,7 @@
+{
+  "watch": ["src"],
+  "ignore": ["src/**/*.spec.ts", "node_modules"],
+  "ext": "ts,tsx,mjs",
+  "exec": "yarn run build:server && yarn run build:postcss && yarn run start:server",
+  "legacyWatch": true
+}
