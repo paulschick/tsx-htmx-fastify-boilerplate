@@ -12,4 +12,5 @@ await esbuild.build({
     outfile: 'dist/server.js',
     platform: 'node',
     target: ['node18.16'], // remove if using packages: 'external'
+    external: ['sqlite3']
 });
